@@ -1,0 +1,11 @@
+--- a/drivers/net/wireless/bcm4336/Makefile	2015-08-27 22:18:14.000000000 +0200
++++ b/drivers/net/wireless/bcm4336/Makefile	2015-08-27 22:53:37.661652100 +0200
+@@ -3,7 +3,7 @@
+ #    otherwise please remove it.
+ DHDCFLAGS = -Wall -Wstrict-prototypes -Dlinux -DBCMDRIVER                \
+ 	-DBCMDONGLEHOST -DUNRELEASEDCHIP -DBCMDMA32 -DBCMFILEIMAGE            \
+-	-DDHDTHREAD -DDHD_DEBUG -DSHOW_EVENTS -DBCMDBG                        \
++	-DDHDTHREAD -DSHOW_EVENTS -DBCMDBG                        \
+ 	-DWIFI_ACT_FRAME -DARP_OFFLOAD_SUPPORT                                \
+ 	-DKEEP_ALIVE -DPKT_FILTER_SUPPORT                                     \
+ 	-DEMBEDDED_PLATFORM -DENABLE_INSMOD_NO_FW_LOAD -DPNO_SUPPORT          \
