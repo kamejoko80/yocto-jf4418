@@ -11,6 +11,9 @@ addons:
         - bc 
         - wget
         - git
+        - diffstat
+        - makeinfo
+        - chrpath 
 script:
         - bash -ex build.sh
 
