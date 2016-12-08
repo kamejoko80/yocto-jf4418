@@ -50,6 +50,9 @@ source oe-init-build-env
 
 # ---- stuff to add update meta-jellyfish to conf ---
 
+# Goto conf folder
+cd conf/
+
 # Search string
 STR1=$(grep -m 1 "meta-yocto-bsp" bblayers.conf)
 #echo $STR1
@@ -82,6 +85,9 @@ echo $AP2 >> bblayers.conf
 
 # Add EOL
 sed -i -e '$a\' bblayers.conf
+
+# Return to build folder
+cd ../
 
 # ---- stuff to add update meta-jellyfish to conf ---
 
