@@ -16,5 +16,5 @@ addons:
         - texinfo
         - chrpath 
 script:
-        - bash -ex build.sh
+        - bash -ex travis_build.sh
 

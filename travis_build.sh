@@ -91,6 +91,12 @@ sed -i "${LINE2} i \  ${STR4} \\" bblayers.conf
 # Print out the config file
 cat bblayers.conf
 
+# Replace the machine name
+sed -i '/MACHINE ??= "qemux86"/c\MACHINE ??= "jf4418"' local.conf
+
+# Print out the config file
+cat local.conf
+
 # Return to build folder
 cd ../
 
