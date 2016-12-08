@@ -102,7 +102,7 @@ cd ../
 
 # ---- stuff to add update meta-jellyfish to conf ---
 
-bitbake MACHINE=jf4418 core-image-minimal >> $BUILD_OUTPUT 2>&1
+bitbake core-image-minimal >> $BUILD_OUTPUT 2>&1
 
 # ---- stuff to limit build log ---
 # The build finished without returning an error so dump a tail of the output
