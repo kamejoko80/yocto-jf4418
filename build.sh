@@ -70,12 +70,12 @@ STR4=$STR3'meta-jellyfish \'
 echo $STR4
 
 # Apend1
-AP1="BBLAYERS+="
+AP1="BBLAYERS += "
 AP1+=$STR4
 echo $AP1
 
 # Apend2
-AP2="BBLAYERS_NON_REMOVABLE+="
+AP2="BBLAYERS_NON_REMOVABLE += "
 AP2+=$STR4
 echo $AP2
 
