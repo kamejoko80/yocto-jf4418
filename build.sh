@@ -31,6 +31,11 @@ PING_LOOP_PID=$!
 
 # ---- stuff to limit build log ---
 
+# Install required packages
+sudo apt-get install diffstat
+sudo apt-get install texinfo
+sudo apt-get install chrpath
+
 # Pull poky repo
 echo "Clone poky fido..."
 git clone -b fido https://git.yoctoproject.org/git/poky

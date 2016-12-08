@@ -2,6 +2,7 @@ dist: trusty
 language: c
 compiler: gcc
 cache: ccache
+sudo: required
 env:
   global:
    - TERM=dumb
@@ -12,7 +13,7 @@ addons:
         - wget
         - git
         - diffstat
-        - makeinfo
+        - texinfo
         - chrpath 
 script:
         - bash -ex build.sh
