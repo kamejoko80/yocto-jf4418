@@ -1,0 +1,16 @@
+dist: trusty
+language: c
+compiler: gcc
+cache: ccache
+env:
+  global:
+   - TERM=dumb
+addons:
+   apt:
+      packages:
+        - bc 
+        - wget
+        - git
+script:
+        - bash -ex build.sh
+
