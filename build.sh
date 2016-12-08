@@ -66,17 +66,17 @@ STR3=$(echo $STR2 | sed -E 's/(meta-yocto-bsp)+$//')
 echo $STR3
 
 # Create new meta
-STR4=$STR3'meta-jellyfish \'
+STR4=$STR3'meta-jellyfish'
 echo $STR4
 
 # Apend1
 AP1="BBLAYERS += "
-AP1+=$STR4
+AP1+="$STR4"
 echo $AP1
 
 # Apend2
 AP2="BBLAYERS_NON_REMOVABLE += "
-AP2+=$STR4
+AP2+="$STR4"
 echo $AP2
 
 # Apend variables
