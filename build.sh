@@ -55,38 +55,33 @@ cd conf/
 
 # Search string
 STR1=$(grep -m 1 "meta-yocto-bsp" bblayers.conf)
-echo $STR1
+#echo $STR1
 
 # Remove backslash
 STR2=$(echo $STR1 | sed 's/\\//g')
-echo $STR2
+#echo $STR2
 
 # Remove pattern
 STR3=$(echo $STR2 | sed -E 's/(meta-yocto-bsp)+$//')
-echo $STR3
+#echo $STR3
 
 # Create new meta
-STR4=$STR3'meta-jellyfish'
-echo $STR4
+STR4=$STR3'meta-jellyfish \'
+echo PATTERN=$STR4
 
-# Apend1
-AP1="BBLAYERS += "
-AP1+="$STR4"
-echo $AP1
+# Get line number match pattern
+LINE1=$(grep -nr "meta-yocto-bsp" bblayers.conf | sed 's/:.*//')
+echo LINE1=$LINE1
 
-# Apend2
-AP2="BBLAYERS_NON_REMOVABLE += "
-AP2+="$STR4"
-echo $AP2
+# Append patterns
+sed -i "${LINE1} i \  ${STR4} \\" bblayers.conf
 
-# Apend variables
-echo $AP1 >> bblayers.conf
-# Add EOL
-sed -i -e '$a\' bblayers.conf
-# Apend variables
-echo $AP2 >> bblayers.conf
-# Add EOL
-sed -i -e '$a\' bblayers.conf
+# Get line number match pattern
+LINE2=$(grep -n "meta-yocto" bblayers.conf | tail -1 | sed 's/:.*//')
+echo LINE2=$LINE2
+
+# Append patterns
+sed -i "${LINE2} i \  ${STR4} \\" bblayers.conf
 
 # Print out the config file
 cat bblayers.conf
