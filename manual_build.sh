@@ -3,7 +3,7 @@
 # Copyright @ 2016 Dang Minh Phuong
 
 # Check source code folder exists
-if [ -f "poky" ]; then
+if [ -d "poky" ]; then
     cd poky
     # Source environment variables
     echo "Source environment variables..."
