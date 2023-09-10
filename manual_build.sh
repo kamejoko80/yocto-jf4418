@@ -20,7 +20,7 @@ else
 
     # Pull meta-jellyfish
     echo "Clone meta-jellyfish..."
-    git clone https://github.com/letanphuc/meta-jellyfish.git
+    https://github.com/kamejoko80/meta-jellyfish.git
 
     # Source environment variables
     echo "Source environment variables..."
